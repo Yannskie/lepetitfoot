@@ -1,0 +1,10 @@
+<!doctype html><html lang="no"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f6f4ef"><title>Petit Foot</title><link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Petit Foot"><link rel="stylesheet" href="/styles.css"></head><body><main class="app">
+<header><div class="profile"><span class="avatar">👦🏼</span><div><b>Hermann</b><small>Nivå <span id="level">1</span> · <span id="xp">0</span> XP</small></div></div><b>⚽ <span id="balls">0</span></b></header>
+<section class="play"><div class="progress"><i id="progressBar"></i></div><div class="art" id="art">⚽</div><p class="eyebrow" id="eyebrow">Petit Foot</p><h1 id="french">Klar?</h1><p class="translation" id="translation">Fransk på ett minutt.</p>
+<div id="listenState" hidden><div class="orb">🎙️</div><b id="listenLabel">Si det nå</b><div class="meter"><i id="soundMeter"></i></div></div>
+<div id="feedback" hidden><strong id="feedbackTitle"></strong><small id="feedbackMeta"></small></div>
+<button id="startButton" class="main">START ⚽</button><button id="replayButton" hidden>🔊 Hør igjen</button><button id="stopButton" hidden>Stopp</button></section>
+<section class="collection"><strong>Samlingen</strong><span id="collectionText">0 av 6 baller</span><div id="ballGrid" class="grid"><span>◌</span><span>◌</span><span>◌</span><span>◌</span><span>◌</span><span>◌</span></div></section>
+<details><summary>For forelder</summary><label>Fransk stemme <select id="voiceSelect"><option value="agathe">Agathe</option><option value="hector">Hector</option></select></label><p>Velg stemmen som er enklest å forstå.</p></details>
+<aside id="debug" hidden><pre id="debugText"></pre></aside></main>
+<script src="/app.js"></script><script>if('serviceWorker'in navigator&&location.protocol==='https:')navigator.serviceWorker.register('/sw.js').catch(()=>{});</script></body></html>
