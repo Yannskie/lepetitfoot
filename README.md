@@ -23,7 +23,7 @@ Use `?debug=1` for transcript and scoring information. As with any application t
 
 ## Football player collection (2025/26 edition)
 
-The app includes eight real-footballer cards built with original Petit Foot artwork and Wikimedia Commons photos. A player card unlocks after completing a six-word French round with **four or more successful speech-to-text matches**. Repeated successful rounds unlock the next card. Progress and XP are stored only in the local browser (localStorage), so they are device-specific and can be lost if Safari data is cleared. There are no purchases or random loot boxes.
+The app includes sixteen real-footballer cards built with original Petit Foot artwork and Wikimedia Commons photos. A player card unlocks after completing a six-word French round with **four or more successful speech-to-text matches**. Repeated successful rounds unlock the next card. Progress and XP are stored only in the local browser (localStorage), so they are device-specific and can be lost if Safari data is cleared. There are no purchases or random loot boxes.
 
 ### Ratings
 Card ratings use an **editorial Petit Foot 0–100 scale**:
@@ -48,3 +48,12 @@ Photographs are loaded from Wikimedia Commons at runtime. Each unlocked card lin
 | Lionel Messi | Inter Miami Messi 2024 (cropped).jpg | TheSoccerBoy; crop by CarterSterling | CC BY 4.0 |
 
 For sources, follow `https://commons.wikimedia.org/wiki/File:<filename>`. Photo inclusion is informational, not sponsorship or endorsement. CC BY-SA imposes special sharing obligations for adapted photo material; evaluate those obligations before redistribution.
+
+## Automatic listening, Pause and Stop
+
+After each French phrase plays, the microphone starts automatically and listens for the child to repeat it. Recording stops automatically after a brief silence. No tap-to-record or continue button is required during a round.
+
+- **Pause** interrupts playback, microphone capture, pending recognition and auto-advance. **Fortsett** replays the current French phrase and then listens automatically. The round's position and good-answer count are retained.
+- **Stop** ends the current round without submitting it for a reward, resetting a streak, or giving a completion bonus. Existing XP, cards and streak remain saved.
+- Switching away from Safari automatically pauses the round. The microphone animation pulses only when voice activity is detected.
+
