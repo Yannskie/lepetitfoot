@@ -7,30 +7,41 @@
   const LICENSE_BY = 'https://creativecommons.org/licenses/by/4.0/';
   const LICENSE_SA = 'https://creativecommons.org/licenses/by-sa/4.0/';
   const players = [
-    {id:'courtois',name:'Thibaut Courtois',short:'COURTOIS',position:'GK',role:'Keeper',country:'Belgia',flag:'🇧🇪',world:90,positionLevel:95,stats:[['REF',96],['POS',94],['GRE',92]],tier:'royal',file:'Thibaut Courtois WC2022.jpg',credit:'Hossein Zohrevand / Tasnim News Agency',license:'CC BY 4.0',licenseURL:LICENSE_BY},
-    {id:'vandijk',name:'Virgil van Dijk',short:'VAN DIJK',position:'CB',role:'Midtstopper',country:'Nederland',flag:'🇳🇱',world:92,positionLevel:95,stats:[['FOR',96],['HOD',94],['PAS',87]],tier:'royal',file:'Liverpool vs. Chelsea, UEFA Super Cup 2019-08-14 05 (Virgil Van Dijk).jpg',credit:'Mehdi Bolourian / Fars Media Corporation',license:'CC BY 4.0',licenseURL:LICENSE_BY},
-    {id:'bellingham',name:'Jude Bellingham',short:'BELLINGHAM',position:'CAM',role:'Midtbane',country:'England',flag:'🏴',world:93,positionLevel:95,stats:[['PAS',93],['TEK',94],['LØP',92]],tier:'royal',file:'Jude Bellingham 2022-11-21 1.jpg',credit:'Hossein Zohrevand / Tasnim News Agency',license:'CC BY 4.0',licenseURL:LICENSE_BY},
-    {id:'salah',name:'Mohamed Salah',short:'SALAH',position:'RW',role:'Høyrekant',country:'Egypt',flag:'🇪🇬',world:94,positionLevel:96,stats:[['FAR',95],['SKU',96],['TEK',95]],tier:'aurora',file:'Mohamed Salah 2022.png',credit:'Al AHLY TV',license:'CC BY 3.0',licenseURL:'https://creativecommons.org/licenses/by/3.0/'},
-    {id:'yamal',name:'Lamine Yamal',short:'YAMAL',position:'RW',role:'Høyrekant',country:'Spania',flag:'🇪🇸',world:96,positionLevel:96,stats:[['FAR',95],['DRI',98],['PAS',94]],tier:'aurora',file:'Lamine Yamal in 2025 (cropped).jpg',credit:'Biso (original photo), Mickey Đại Phát (crop)',license:'CC BY 4.0',licenseURL:LICENSE_BY},
-    {id:'mbappe',name:'Kylian Mbappé',short:'MBAPPÉ',position:'ST',role:'Spiss',country:'Frankrike',flag:'🇫🇷',world:97,positionLevel:97,stats:[['FAR',99],['SKU',96],['DRI',96]],tier:'star',file:'Kylian Mbappe 2017.jpg',credit:'Biser Todorov',license:'CC BY 4.0',licenseURL:LICENSE_BY},
-    {id:'haaland',name:'Erling Haaland',short:'HAALAND',position:'ST',role:'Spiss',country:'Norge',flag:'🇳🇴',world:96,positionLevel:98,stats:[['SKU',99],['FYS',98],['FAR',93]],tier:'star',file:'Erling Haaland 2023.jpg',credit:'Jacek Stanislawek',license:'CC BY-SA 4.0',licenseURL:LICENSE_SA},
-    {id:'messi',name:'Lionel Messi',short:'MESSI',position:'CAM',role:'Angrepsmidt',country:'Argentina',flag:'🇦🇷',world:90,positionLevel:92,stats:[['TEK',99],['PAS',96],['DRI',98]],tier:'legend',file:'Inter Miami Messi 2024 (cropped).jpg',credit:'TheSoccerBoy',license:'CC BY 4.0',licenseURL:LICENSE_BY}
+    {id:'courtois',name:'Thibaut Courtois',short:'COURTOIS',position:'GK',role:'Keeper',country:'Belgia',flag:'🇧🇪',world:90,positionLevel:95,stats:[['REF',96],['POS',94],['GRE',92]],tier:'bronze',file:'Thibaut Courtois WC2022.jpg',credit:'Hossein Zohrevand / Tasnim News Agency',license:'CC BY 4.0',licenseURL:LICENSE_BY},
+    {id:'vandijk',name:'Virgil van Dijk',short:'VAN DIJK',position:'CB',role:'Midtstopper',country:'Nederland',flag:'🇳🇱',world:92,positionLevel:95,stats:[['FOR',96],['HOD',94],['PAS',87]],tier:'bronze',file:'Liverpool vs. Chelsea, UEFA Super Cup 2019-08-14 05 (Virgil Van Dijk).jpg',credit:'Mehdi Bolourian / Fars Media Corporation',license:'CC BY 4.0',licenseURL:LICENSE_BY},
+    {id:'bellingham',name:'Jude Bellingham',short:'BELLINGHAM',position:'CAM',role:'Midtbane',country:'England',flag:'🏴',world:93,positionLevel:95,stats:[['PAS',93],['TEK',94],['LØP',92]],tier:'silver',file:'Jude Bellingham 2022-11-21 1.jpg',credit:'Hossein Zohrevand / Tasnim News Agency',license:'CC BY 4.0',licenseURL:LICENSE_BY},
+    {id:'salah',name:'Mohamed Salah',short:'SALAH',position:'RW',role:'Høyrekant',country:'Egypt',flag:'🇪🇬',world:94,positionLevel:96,stats:[['FAR',95],['SKU',96],['TEK',95]],tier:'silver',file:'Mohamed Salah 2022.png',credit:'Al AHLY TV',license:'CC BY 3.0',licenseURL:'https://creativecommons.org/licenses/by/3.0/'},
+    {id:'yamal',name:'Lamine Yamal',short:'YAMAL',position:'RW',role:'Høyrekant',country:'Spania',flag:'🇪🇸',world:96,positionLevel:96,stats:[['FAR',95],['DRI',98],['PAS',94]],tier:'gold',file:'Lamine Yamal in 2025 (cropped).jpg',credit:'Biso (original photo), Mickey Đại Phát (crop)',license:'CC BY 4.0',licenseURL:LICENSE_BY},
+    {id:'mbappe',name:'Kylian Mbappé',short:'MBAPPÉ',position:'ST',role:'Spiss',country:'Frankrike',flag:'🇫🇷',world:97,positionLevel:97,stats:[['FAR',99],['SKU',96],['DRI',96]],tier:'platinum',file:'Kylian Mbappe 2017.jpg',credit:'Biser Todorov',license:'CC BY 4.0',licenseURL:LICENSE_BY},
+    {id:'haaland',name:'Erling Haaland',short:'HAALAND',position:'ST',role:'Spiss',country:'Norge',flag:'🇳🇴',world:96,positionLevel:98,stats:[['SKU',99],['FYS',98],['FAR',93]],tier:'platinum',file:'Erling Haaland 2023.jpg',credit:'Jacek Stanislawek',license:'CC BY-SA 4.0',licenseURL:LICENSE_SA},
+    {id:'messi',name:'Lionel Messi',short:'MESSI',position:'CAM',role:'Angrepsmidt',country:'Argentina',flag:'🇦🇷',world:97,positionLevel:99,stats:[['TEK',99],['PAS',96],['DRI',98]],tier:'legend',file:'Inter Miami Messi 2024 (cropped).jpg',credit:'TheSoccerBoy',license:'CC BY 4.0',licenseURL:LICENSE_BY}
+
+    {id:'saka',name:'Bukayo Saka',short:'SAKA',position:'RW',role:'Høyrekant',country:'England',flag:'🏴',world:87,positionLevel:91,stats:[['FAR',90],['DRI',92],['PAS',87]],tier:'bronze',file:'Bukayo Saka 2022-11-21 1.jpg',credit:'Hossein Zohrevand / Tasnim News Agency',license:'CC BY 4.0',licenseURL:LICENSE_BY},
+    {id:'alisson',name:'Alisson Becker',short:'ALISSON',position:'GK',role:'Keeper',country:'Brasil',flag:'🇧🇷',world:88,positionLevel:93,stats:[['REF',94],['GRE',92],['KIC',89]],tier:'bronze',file:'Alisson in 2018.jpg',credit:'Granada / Wikimedia Commons',license:'CC BY-SA 4.0',licenseURL:LICENSE_SA},
+    {id:'kane',name:'Harry Kane',short:'KANE',position:'ST',role:'Spiss',country:'England',flag:'🏴',world:92,positionLevel:94,stats:[['SKU',95],['PAS',88],['POS',93]],tier:'silver',file:'Harry Kane 2018.jpg',credit:'Soccer.ru (see original file page)',license:'CC BY-SA 3.0',licenseURL:'https://creativecommons.org/licenses/by-sa/3.0/'},
+    {id:'rodri',name:'Rodri',short:'RODRI',position:'CDM',role:'Defensiv midtbane',country:'Spania',flag:'🇪🇸',world:91,positionLevel:94,stats:[['PAS',94],['ROL',94],['TAK',91]],tier:'silver',file:'',credit:'',license:'',licenseURL:''},
+    {id:'vinijr',name:'Vinícius Júnior',short:'VINI JR',position:'LW',role:'Venstrekant',country:'Brasil',flag:'🇧🇷',world:94,positionLevel:95,stats:[['FAR',97],['DRI',96],['SKU',91]],tier:'gold',file:'Vinicius Junior WC2022.jpg',credit:'Hossein Zohrevand / Tasnim News Agency',license:'CC BY-SA 4.0',licenseURL:LICENSE_SA},
+    {id:'debruyne',name:'Kevin De Bruyne',short:'DE BRUYNE',position:'CM',role:'Midtbane',country:'Belgia',flag:'🇧🇪',world:93,positionLevel:95,stats:[['PAS',98],['VIS',97],['SKU',89]],tier:'gold',file:'Kevin De Bruyne.jpg',credit:'Soccer.ru (see original file page)',license:'CC BY-SA 3.0',licenseURL:'https://creativecommons.org/licenses/by-sa/3.0/'},
+    {id:'wirtz',name:'Florian Wirtz',short:'WIRTZ',position:'CAM',role:'Angrepsmidt',country:'Tyskland',flag:'🇩🇪',world:94,positionLevel:95,stats:[['TEK',95],['PAS',93],['DRI',94]],tier:'gold',file:'Florian Wirtz 04012026 (3) (extracted).jpg',credit:'Timmy96 (original), Raskuly (crop)',license:'CC0 1.0',licenseURL:'https://creativecommons.org/publicdomain/zero/1.0/'},
+    {id:'ronaldo',name:'Cristiano Ronaldo',short:'RONALDO',position:'ST',role:'Spiss',country:'Portugal',flag:'🇵🇹',world:96,positionLevel:97,stats:[['SKU',98],['HOD',98],['POS',96]],tier:'platinum',file:'Cristiano Ronaldo 2018.jpg',credit:'Soccer.ru (see original file page)',license:'CC BY-SA 3.0',licenseURL:'https://creativecommons.org/licenses/by-sa/3.0/'},
   ].map(player => ({
     ...player,
     rating: Math.max(0, Math.min(100, Math.round(player.world * .45 + player.positionLevel * .55))),
-    source: 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(player.file).replace(/%20/g, '_'),
-    photo: 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(player.file).replace(/%20/g, '_') + '?width=640'
+    source: player.file ? 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(player.file).replace(/%20/g, '_') : '',
+    photo: player.file ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(player.file).replace(/%20/g, '_') + '?width=640' : ''
   }));
 
-  const STORAGE_KEY='petit-foot-club-v1';
-  const defaultState={unlocked:[],xp:0,completed:0};
+  const STORAGE_KEY='petit-foot-club-v2';
+  const defaultState={unlocked:[],xp:0,completed:0,streak:0,bestStreak:0};
   let state={...defaultState};
   try {
-    const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');
+    const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||localStorage.getItem('petit-foot-club-v1')||'null');
     if(saved && typeof saved==='object'){
       state.unlocked=Array.isArray(saved.unlocked)?[...new Set(saved.unlocked)].filter(id=>players.some(p=>p.id===id)):[];
       state.xp=Number.isFinite(saved.xp)?Math.max(0,Math.round(saved.xp)):0;
       state.completed=Number.isFinite(saved.completed)?Math.max(0,Math.round(saved.completed)):0;
+      state.streak=Number.isFinite(saved.streak)?Math.max(0,Math.round(saved.streak)):0;
+      state.bestStreak=Number.isFinite(saved.bestStreak)?Math.max(0,Math.round(saved.bestStreak)):0;
     }
   }catch(_){}
   const root=document.getElementById('clubRoot');
@@ -38,7 +49,15 @@
   let returnFocus=null;
 
   const save=()=>{try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}catch(_){}};
-  const nextCard=()=>players.find(p=>!state.unlocked.includes(p.id));
+  const tierOrder=['legend','platinum','gold','silver','bronze'];
+  const tierRequirements={bronze:1,silver:2,gold:3,platinum:4,legend:6};
+  const tierLabels={bronze:'Bronse',silver:'Sølv',gold:'Gull',platinum:'Platina',legend:'Legend'};
+  function nextCard(){
+    const locked=tier=>players.filter(p=>p.tier===tier&&!state.unlocked.includes(p.id));
+    let tier=tierOrder.find(t=>state.streak>=tierRequirements[t]&&locked(t).length);
+    if(!tier)tier=[...tierOrder].reverse().find(t=>locked(t).length);
+    return tier?locked(tier).sort((a,b)=>a.rating-b.rating)[0]:null;
+  }
   const grade=rating=>rating>=96?'VERDENSSTJERNE':rating>=94?'ELITE':rating>=90?'PROFF':'TALENT';
 
   function card(player,locked=false,large=false){
@@ -46,11 +65,11 @@
       return '<div class="pf-card pf-card--locked" aria-label="Låst spillerkort"><div class="pf-card__stripe"></div><div class="pf-card__mystery">?</div><div class="pf-card__lock">🔒 LÅST</div><div class="pf-card__name">UKJENT SPILLER</div><div class="pf-card__edition">PETIT FOOT · 25/26</div></div>';
     }
     return '<div class="pf-card pf-card--'+player.tier+(large?' pf-card--large':'')+'">'+
-      '<div class="pf-card__stripe"></div><div class="pf-card__topline">PETIT FOOT <span>25/26</span></div>'+
+      '<div class="pf-card__stripe"></div><div class="pf-card__topline">PETIT FOOT <span>'+tierLabels[player.tier]+'</span></div>'+
       '<div class="pf-card__rating">'+player.rating+'<small>'+player.position+'</small></div>'+
       '<span class="pf-card__flag" aria-label="'+player.country+'">'+player.flag+'</span>'+
       '<div class="pf-card__silhouette">'+player.short.slice(0,1)+'</div>'+
-      '<img class="pf-card__photo" loading="lazy" alt="Foto av '+player.name+'" src="'+player.photo+'">'+
+      (player.photo?'<img class="pf-card__photo" loading="lazy" alt="Foto av '+player.name+'" src="'+player.photo+'" onerror="this.style.display=\'none\'">':'')+
       '<div class="pf-card__bottom"><div class="pf-card__role">'+grade(player.rating)+' · '+player.role+'</div>'+
       '<div class="pf-card__name">'+player.short+'</div>'+
       '<div class="pf-card__stats">'+player.stats.map(([label,value])=>'<div><b>'+value+'</b><small>'+label+'</small></div>').join('')+'</div>'+
@@ -62,8 +81,8 @@
     const count=state.unlocked.length, next=nextCard(), complete=count===players.length;
     root.innerHTML='<div class="pf-club-head"><div><span class="pf-overline">DIN FOTBALLKLUBB</span><h2>Drømmelaget</h2></div><span class="pf-count">'+count+' / '+players.length+' kort</span></div>'+
       '<div class="pf-club-body"><div class="pf-mini-card">'+(complete?card(players[players.length-1]):card(next,true))+'</div>'+
-      '<div class="pf-club-copy"><strong>'+(complete?'Full samling!':'Neste belønning')+'</strong>'+
-      '<p>'+(complete?'Du har samlet alle stjernene. Fortsett å øve på fransk!':'Fullfør en runde med minst 4 gode svar for å få et nytt spillerkort.')+'</p>'+
+      '<div class="pf-club-copy"><div class="pf-badges"><span>🔥 Streak '+state.streak+'</span><span>🏆 Rekord '+state.bestStreak+'</span></div><strong>'+(complete?'Full samling!':'Neste belønning')+'</strong>'+
+      '<p>'+(complete?'Du har samlet alle stjernene. Fortsett å øve på fransk!':'Få minst 4 gode svar. Streak 2: sølv · 3: gull · 4: platina · 6: legend.')+'</p>'+
       '<div class="pf-mini-progress" role="progressbar" aria-valuemin="0" aria-valuemax="'+players.length+'" aria-valuenow="'+count+'"><span style="width:'+(count/players.length*100)+'%"></span></div>'+
       '<button id="openCollection" type="button" class="pf-link-button">Se spillerkort <span aria-hidden="true">↗</span></button></div></div>';
     document.getElementById('openCollection')?.addEventListener('click',showCollection);
@@ -84,6 +103,7 @@
     returnFocus?.focus?.();
   }
   function credit(player){
+    if(!player.photo)return '<div class="pf-license">Dette kortet bruker en original silhuett til et lisensklarert spillerfoto er valgt.</div>';
     return '<div class="pf-license"><strong>Foto og lisens</strong><p>Foto: '+player.credit+'. Vises beskåret i kortet.</p><p><a href="'+player.source+'" target="_blank" rel="noopener noreferrer">Se originalfoto ↗</a> · <a href="'+player.licenseURL+'" target="_blank" rel="noopener noreferrer">'+player.license+' ↗</a></p>'+
       '<p class="pf-note">Lisenser gjelder fotografiene. Petit Foot-kortet er en original design. Spilleren støtter ikke spillet.</p></div>';
   }
@@ -95,14 +115,14 @@
   }
   function showCollection(){
     const count=state.unlocked.length;
-    openModal('<div class="pf-modal-header"><div><span class="pf-overline">PETIT FOOT · 25/26</span><h2>Min kortsamling</h2><p>'+count+' av '+players.length+' fotballstjerner</p></div><button class="pf-close" data-close-modal type="button" aria-label="Lukk">✕</button></div>'+
+    openModal('<div class="pf-modal-header"><div><span class="pf-overline">PETIT FOOT · 25/26</span><h2>Min kortsamling</h2><p>'+count+' av '+players.length+' fotballstjerner · Rekord '+state.bestStreak+'</p></div><button class="pf-close" data-close-modal type="button" aria-label="Lukk">✕</button></div>'+
       '<div class="pf-gallery">'+players.map((p,i)=>'<button type="button" class="pf-card-trigger" data-player="'+p.id+'" '+(!state.unlocked.includes(p.id)?'disabled':'')+' aria-label="'+(state.unlocked.includes(p.id)?p.name+' '+p.rating+' poeng':'Låst kort '+(i+1))+'">'+card(p,!state.unlocked.includes(p.id))+'</button>').join('')+'</div>'+
-      '<div class="pf-rating-info"><strong>Petit Foot-rating: 0–100</strong><p>Vi kombinerer 45 % vurdert globalt nivå med 55 % vurdert prestasjon i spillerens egen posisjon. Tallene er illustrerende, ikke en offisiell rangering eller verifiserte sesongstatistikker.</p><p>Alle kort opptjenes ved å lære fransk. Ingen kjøp eller tilfeldige pakker.</p></div>'+
+      '<div class="pf-rating-info"><strong>Streak-belønninger</strong><p>4 gode svar per runde bygger en streak. Lengre streak gir tilgang til bedre kort. Ingen kjøp eller tilfeldige pakker.</p><strong>Petit Foot-rating: 0–100</strong><p>Vi kombinerer 45 % vurdert globalt nivå med 55 % vurdert prestasjon i spillerens egen posisjon. Tallene er illustrerende, ikke en offisiell rangering eller verifiserte sesongstatistikker.</p><p>Alle kort opptjenes ved å lære fransk. Ingen kjøp eller tilfeldige pakker.</p></div>'+
       '<p class="pf-note">Trykk på et opplåst kort for kilde, fotolisens og beregning. © Bildeskaperne, under lisensene som er oppgitt på hvert kort.</p>');
   }
   function showReward(player){
     openModal('<div class="pf-modal-header"><span class="pf-overline">★ NY BELØNNING ★</span><button class="pf-close" data-close-modal type="button" aria-label="Lukk">✕</button></div>'+
-      '<div class="pf-reward-intro"><div class="pf-reward-symbol">✦</div><h2>Nytt spillerkort!</h2><p>Du øvde på fransk og vant en stjerne.</p></div>'+
+      '<div class="pf-reward-intro"><div class="pf-reward-symbol">✦</div><h2>Nytt spillerkort!</h2><p>🔥 Streak '+state.streak+' · '+tierLabels[player.tier]+'</p></div>'+
       '<div class="pf-featured-card pf-reward-card">'+card(player,false,true)+'</div>'+
       '<div class="pf-player-info"><h2>'+player.name+'</h2><p>'+player.rating+'/100 · '+player.role+'</p></div>'+
       '<button type="button" class="pf-reward-done" data-close-modal>Tilbake til spillet</button>'+
@@ -124,8 +144,10 @@
     setXP(value){state.xp=Math.max(0,Math.round(value));save()},
     // Fixed unlock order; the child does not need to gamble to get a favorite.
     completeRound(correctAnswers){
-      if(correctAnswers<4)return null;
+      if(correctAnswers<4){state.streak=0;save();render();return null}
       state.completed++;
+      state.streak++;
+      state.bestStreak=Math.max(state.bestStreak,state.streak);
       const next=nextCard();
       if(next)state.unlocked.push(next.id);
       save();render();
@@ -135,6 +157,8 @@
     collection:showCollection,
     render,
     getCollectionCount(){return state.unlocked.length},
+    getStreak(){return state.streak},
+    getBestStreak(){return state.bestStreak},
     getPlayers(){return players.map(({id,name,position,rating,world,positionLevel,tier})=>({id,name,position,rating,world,positionLevel,tier}))}
   };
   render();
