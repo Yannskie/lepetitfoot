@@ -3,7 +3,12 @@
 <section class="play"><div class="progress"><i id="progressBar"></i></div><div class="art" id="art">⚽</div><p class="eyebrow" id="eyebrow">Petit Foot</p><h1 id="french">Klar?</h1><p class="translation" id="translation">Fransk på ett minutt.</p>
 <div id="listenState" hidden><div class="orb">🎙️</div><b id="listenLabel">Si det nå</b><div class="meter"><i id="soundMeter"></i></div></div>
 <div id="feedback" hidden><strong id="feedbackTitle"></strong><small id="feedbackMeta"></small></div>
-<button id="startButton" class="main">START ⚽</button><button id="replayButton" hidden>🔊 Hør igjen</button><button id="stopButton" hidden>Stopp</button></section>
+<button id="startButton" class="main" type="button">START ⚽</button>
+<div id="sessionControls" class="session-controls" hidden>
+  <button id="pauseButton" class="pause-action" type="button">⏸ Pause</button>
+  <button id="stopButton" class="stop-action" type="button">⏹ Stopp</button>
+</div>
+<button id="replayButton" class="replay-action" type="button" hidden>🔊 Hør igjen</button></section>
 <section class="pf-club" id="clubRoot" aria-label="Min fotballkort-samling"></section><div id="cardModalRoot" hidden></div>
 <details><summary>For forelder</summary><label>Fransk stemme <select id="voiceSelect"><option value="agathe">Agathe</option><option value="hector">Hector</option></select></label><p>Velg stemmen som er enklest å forstå.</p></details>
 <aside id="debug" hidden><pre id="debugText"></pre></aside></main>
