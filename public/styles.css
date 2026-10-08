@@ -36,3 +36,12 @@
 @media(min-width:460px){.pf-card__rating{font-size:46px}.pf-card__name{font-size:23px}.pf-card__stats b{font-size:16px}.pf-card__topline{font-size:9px}}
 
 .top-stats{display:flex;align-items:center;gap:14px;white-space:nowrap}.pf-badges{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 10px}.pf-badges span{font-size:11px;display:inline-block;padding:5px 7px;background:#ffffff1a;border-radius:99px}.pf-card--bronze{background:radial-gradient(circle at 62% 34%,#cfb18a,#84614b 58%,#342c26);border-color:#d2ad79}.pf-card--silver{background:radial-gradient(circle at 62% 34%,#d1dce8,#737f92 58%,#26323e);border-color:#dbe4ed}.pf-card--gold{background:radial-gradient(circle at 62% 34%,#e6daa3,#a58a43 58%,#3c3429);border-color:#e3d098}.pf-card--platinum{background:radial-gradient(circle at 62% 34%,#a8e5e3,#3b8b91 58%,#1b333d);border-color:#ace6e8}
+
+/* Explicit session controls; microphone still starts automatically after playback. */
+.session-controls{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;margin:18px 0 0}
+.session-controls[hidden]{display:none!important}
+.session-controls button{margin:0;min-height:54px;padding:10px 12px;font-size:16px;border-radius:16px}
+.pause-action{background:#e2eee5;color:#153e31;border:1px solid #b8cfc0}
+.stop-action{background:#fff;color:#5d534d;border:1px solid #ddd7d1}
+.replay-action{background:#f6f8f3;color:#2d5c48;border:1px solid #c8d7ce;margin-top:12px}
+.session-controls button:focus-visible,.replay-action:focus-visible{outline:3px solid #297d57;outline-offset:3px}
